@@ -38,10 +38,6 @@ timeUpdate();
 
 //Save text to local storage when save is selected
 
-// var time 
-// var description
-
-
 $(".saveBtn").on("click", function () {
     var descr = $(this).siblings(".description").val();
     var hour = $(this).siblings(".hour").text();
@@ -61,7 +57,7 @@ $(".time-block").each(function () {
 
     if (savedVal !== null) {
         console.log('IT RAN')
-        $(this).children(".description").innerHTML = savedVal;
+        $(this).children(".description").text(savedVal);
     }
 
 
