@@ -3,14 +3,13 @@ $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
 //Color-code time blocks based on time to current time: past, present or future. 
 
-function timeUpdate () {
+function timeUpdate() {
     //check current 
     var currentHour = moment().hour();
 
     //pull time block
-    $(".time-block").each(function(){
+    $(".time-block").each(function () {
         var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-        console.log(currentHour, blockHour);
 
         // loop - compare current time to time block to determing past, present, or future
 
@@ -19,7 +18,7 @@ function timeUpdate () {
             $(this).addClass("past");
             $(this).removeClass("present");
             $(this).removeClass("future");
-        } 
+        }
         //check if hour is in the present 
         else if (blockHour === currentHour) {
             $(this).removeClass("past");
@@ -32,15 +31,47 @@ function timeUpdate () {
             $(this).removeClass("present");
             $(this).addClass("future");
         }
-
     })
 };
 
-timeUpdate(); 
-
-//Ability to add text to time block event
+timeUpdate();
 
 //Save text to local storage when save is selected
 
+// var time 
+// var description
+
+
+$(".saveBtn").on("click", function () {
+    var descr = $(this).siblings(".description").val();
+    var hour = $(this).siblings(".hour").text();
+
+    localStorage.setItem(hour, descr);
+})
+
 //Page refreshed events persist
+// run an each for .time-block
+$(".time-block").each(function () {
+    var savedhourNode = $(this).children(".hour");
+    var savedHour = savedhourNode[0].innerHTML;
+    console.log('savedHour: ', savedHour);
+    var savedVal = localStorage.getItem(savedHour);
+    
+    console.log(savedVal)
+
+    if (savedVal !== null) {
+        console.log('IT RAN')
+        $(this).children(".description").innerHTML = savedVal;
+    }
+
+
+    // store value of .hour div in a variable
+    // check local storage with the value of hour to see if you have a description saved
+    // if you have a description saved udpate the innerText of .description with the returned value of getItem
+
+})
+
+
+
+
 
