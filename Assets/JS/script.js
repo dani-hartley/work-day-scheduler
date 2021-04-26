@@ -6,6 +6,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 function timeUpdate() {
     //check current 
     var currentHour = moment().hour();
+     
 
     //pull time block
     $(".time-block").each(function () {

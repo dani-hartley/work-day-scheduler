@@ -4,7 +4,14 @@ In this challenge we were required to create a web application that allows the u
 
 ## Objective 
 Create a Work Day Scheduler ensuring that the following requirements are met: 
-![image](https://user-images.githubusercontent.com/79660405/116011859-bc015180-a5ec-11eb-85e0-2bbf48fa9da2.png)
+![image](https://user-images.githubusercontent.com/79660405/116022468-e0baf080-a60f-11eb-8ac2-a9ad0e2b24fc.png)
 
 ## Screenshots
 
+![image](https://user-images.githubusercontent.com/79660405/116022351-a5202680-a60f-11eb-956d-9ecfb8189883.png)
+
+![image](https://user-images.githubusercontent.com/79660405/116021837-a00ea780-a60e-11eb-85a8-ac64b8e82160.png)
+
+## Deployed Application
+
+https://dani-hartley.github.io/work-day-scheduler/
